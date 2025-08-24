@@ -10,19 +10,23 @@
   --bequant-primary-dark: #0f172a;   /* Slate-900 */
   --bequant-primary-light: #38bdf8;  /* Teal-400 */
   
-  /* Light Mode Colors - Exact from bequant.dev */
-  --bequant-bg: #ffffff;              /* White background */
-  --bequant-surface: #ffffff;         /* White surface */
-  --bequant-border: #e5e7eb;          /* Gray-200 border */
-  --bequant-text: #111827;            /* Gray-900 text */
-  --bequant-text-secondary: #6b7280;  /* Gray-500 secondary text */
-  --bequant-gray-50: #f9fafb;         /* Gray-50 */
-  --bequant-gray-100: #f3f4f6;        /* Gray-100 */
-  --bequant-gray-200: #e5e7eb;        /* Gray-200 */
-  --bequant-gray-700: #374151;        /* Gray-700 */
-  --bequant-gray-800: #1f2937;        /* Gray-800 */
-  --bequant-gray-900: #111827;        /* Gray-900 */
-  --bequant-gray-950: #0f172a;        /* Gray-950 */
+  /* Light Mode Colors - Softer, more pleasant design */
+--bequant-bg: #f8fafc;              /* Slate-50 background - softer white */
+--bequant-surface: #ffffff;         /* White surface */
+--bequant-border: #e2e8f0;          /* Slate-200 border - softer */
+--bequant-text: #1e293b;            /* Slate-800 text - softer than pure black */
+--bequant-text-secondary: #64748b;  /* Slate-500 secondary text - softer */
+--bequant-gray-50: #f8fafc;         /* Slate-50 */
+--bequant-gray-100: #f1f5f9;        /* Slate-100 */
+--bequant-gray-200: #e2e8f0;        /* Slate-200 */
+--bequant-gray-300: #cbd5e1;        /* Slate-300 */
+--bequant-gray-400: #94a3b8;        /* Slate-400 */
+--bequant-gray-500: #64748b;        /* Slate-500 */
+--bequant-gray-600: #475569;        /* Slate-600 */
+--bequant-gray-700: #334155;        /* Slate-700 */
+--bequant-gray-800: #1e293b;        /* Slate-800 */
+--bequant-gray-900: #0f172a;        /* Slate-900 */
+--bequant-gray-950: #020617;        /* Slate-950 */
   --bequant-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
@@ -357,6 +361,94 @@ a:hover {
 .category-box:hover {
   transform: translateY(-2px) !important;
   box-shadow: var(--bequant-shadow) !important;
+}
+
+/* Light Theme Improvements - Softer, more pleasant design */
+body {
+  background-color: var(--bequant-bg) !important;
+  color: var(--bequant-text) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main content area - softer background */
+#main-outlet {
+  background-color: var(--bequant-bg) !important;
+}
+
+/* Topic list improvements */
+.topic-list .topic-list-item {
+  background-color: var(--bequant-surface) !important;
+  border: 1px solid var(--bequant-border) !important;
+  border-radius: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.topic-list .topic-list-item:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Navigation pills - softer styling */
+.nav-pills .nav-item a {
+  color: var(--bequant-text-secondary) !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.2s ease !important;
+  background-color: transparent !important;
+}
+
+.nav-pills .nav-item a:hover {
+  color: var(--bequant-primary) !important;
+  background-color: rgba(37, 99, 235, 0.05) !important;
+}
+
+.nav-pills .nav-item a.active {
+  background-color: var(--bequant-primary) !important;
+  color: white !important;
+}
+
+/* Sidebar improvements */
+.sidebar-section {
+  background-color: var(--bequant-surface) !important;
+  border: 1px solid var(--bequant-border) !important;
+  border-radius: 0.75rem !important;
+  margin-bottom: 1rem !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Buttons - softer styling */
+.btn {
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn.btn-primary {
+  background-color: var(--bequant-primary) !important;
+  border-color: var(--bequant-primary) !important;
+  box-shadow: 0 1px 2px 0 rgba(37, 99, 235, 0.1) !important;
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--bequant-primary-light) !important;
+  border-color: var(--bequant-primary-light) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Forms - softer styling */
+.form-control {
+  background-color: var(--bequant-surface) !important;
+  border: 1px solid var(--bequant-border) !important;
+  border-radius: 0.5rem !important;
+  color: var(--bequant-text) !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.form-control:focus {
+  border-color: var(--bequant-primary) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
 }
 
 /* Ensure smooth transitions */
