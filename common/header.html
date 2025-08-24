@@ -5,29 +5,44 @@
 <style>
 /* BeQuant Theme CSS Variables and Base Styles */
 :root {
-  /* BeQuant Color Palette */
-  --bequant-primary: #2563eb;
-  --bequant-primary-dark: #0f172a;
-  --bequant-primary-light: #38bdf8;
+  /* BeQuant Color Palette - Exact from bequant.dev */
+  --bequant-primary: #2563eb;        /* Indigo-600 */
+  --bequant-primary-dark: #0f172a;   /* Slate-900 */
+  --bequant-primary-light: #38bdf8;  /* Teal-400 */
   
-  /* Light Mode Colors */
-  --bequant-bg: #ffffff;
-  --bequant-surface: #f8fafc;
-  --bequant-border: #e2e8f0;
-  --bequant-text: #1e293b;
-  --bequant-text-secondary: #64748b;
+  /* Light Mode Colors - Exact from bequant.dev */
+  --bequant-bg: #ffffff;              /* White background */
+  --bequant-surface: #ffffff;         /* White surface */
+  --bequant-border: #e5e7eb;          /* Gray-200 border */
+  --bequant-text: #111827;            /* Gray-900 text */
+  --bequant-text-secondary: #6b7280;  /* Gray-500 secondary text */
+  --bequant-gray-50: #f9fafb;         /* Gray-50 */
+  --bequant-gray-100: #f3f4f6;        /* Gray-100 */
+  --bequant-gray-200: #e5e7eb;        /* Gray-200 */
+  --bequant-gray-700: #374151;        /* Gray-700 */
+  --bequant-gray-800: #1f2937;        /* Gray-800 */
+  --bequant-gray-900: #111827;        /* Gray-900 */
+  --bequant-gray-950: #0f172a;        /* Gray-950 */
   --bequant-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
-/* Dark Mode Colors */
+/* Dark Mode Colors - Exact from bequant.dev */
 [data-theme="dark"] {
-  --bequant-bg: #0f172a;
-  --bequant-surface: #1e293b;
-  --bequant-border: #334155;
-  --bequant-text: #f1f5f9;
-  --bequant-text-secondary: #94a3b8;
-  --bequant-primary: #38bdf8;
-  --bequant-primary-light: #2563eb;
+  --bequant-bg: #0f172a;              /* Gray-950 background */
+  --bequant-surface: #1f2937;         /* Gray-800 surface */
+  --bequant-border: #374151;          /* Gray-700 border */
+  --bequant-text: #f9fafb;            /* Gray-50 text */
+  --bequant-text-secondary: #9ca3af;  /* Gray-400 secondary text */
+  --bequant-gray-50: #f9fafb;         /* Gray-50 */
+  --bequant-gray-100: #f3f4f6;        /* Gray-100 */
+  --bequant-gray-200: #e5e7eb;        /* Gray-200 */
+  --bequant-gray-700: #374151;        /* Gray-700 */
+  --bequant-gray-800: #1f2937;        /* Gray-800 */
+  --bequant-gray-900: #111827;        /* Gray-900 */
+  --bequant-gray-950: #0f172a;        /* Gray-950 */
+  --bequant-primary: #38bdf8;         /* Teal-400 in dark mode */
+  --bequant-primary-light: #2563eb;   /* Indigo-600 in dark mode */
+  --bequant-primary-dark: #0f172a;    /* Gray-950 in dark mode */
   --bequant-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -38,36 +53,101 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Header Styling */
+/* Header Styling - Exact BeQuant.dev design */
 .d-header {
-  background-color: var(--bequant-surface) !important;
+  background-color: var(--bequant-bg) !important;
   border-bottom: 1px solid var(--bequant-border) !important;
-  box-shadow: var(--bequant-shadow) !important;
-}
-
-.d-header .header-buttons .btn {
-  background-color: var(--bequant-primary) !important;
-  color: white !important;
-  border: none !important;
-  border-radius: 0.5rem !important;
+  box-shadow: none !important;
   padding: 0.5rem 1rem !important;
-  font-weight: 600 !important;
-  transition: all 0.2s ease !important;
 }
 
-.d-header .header-buttons .btn:hover {
-  background-color: var(--bequant-primary-light) !important;
-  transform: translateY(-1px) !important;
+/* Dark mode header - Exact BeQuant.dev styling */
+[data-theme="dark"] .d-header {
+  background-color: var(--bequant-gray-950) !important;
+  border-bottom: 1px solid var(--bequant-gray-800) !important;
 }
 
+/* Site title/logo styling */
+.d-header .title {
+  color: var(--bequant-primary) !important;
+  font-weight: bold !important;
+  font-size: 1.5rem !important;
+  text-decoration: none !important;
+}
+
+.d-header .title:hover {
+  color: var(--bequant-primary-light) !important;
+}
+
+/* Header navigation links - Exact BeQuant.dev styling */
 .d-header .header-links a {
   color: var(--bequant-text) !important;
-  font-weight: 500 !important;
+  font-weight: 400 !important;
   transition: color 0.2s ease !important;
+  margin-left: 2rem !important;
+  text-decoration: none !important;
+  font-size: 0.875rem !important;
 }
 
 .d-header .header-links a:hover {
-  color: var(--bequant-primary) !important;
+  text-decoration: underline !important;
+}
+
+/* Header buttons styling - Exact BeQuant.dev styling */
+.d-header .header-buttons .btn {
+  background-color: transparent !important;
+  color: var(--bequant-text) !important;
+  border: none !important;
+  border-radius: 0.5rem !important;
+  padding: 0.25rem !important;
+  font-weight: 400 !important;
+  transition: all 0.2s ease !important;
+  margin-left: 0.75rem !important;
+}
+
+.d-header .header-buttons .btn:hover {
+  background-color: var(--bequant-gray-100) !important;
+  transform: none !important;
+}
+
+/* Dark mode button hover */
+[data-theme="dark"] .d-header .header-buttons .btn:hover {
+  background-color: var(--bequant-gray-800) !important;
+}
+
+/* Theme toggle button in header - Exact BeQuant.dev styling */
+.d-header .bequant-theme-toggle {
+  position: static !important;
+  background-color: transparent !important;
+  color: var(--bequant-text) !important;
+  border: none !important;
+  border-radius: 0.5rem !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0.25rem !important;
+  margin-left: 0.75rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-shadow: none !important;
+  font-size: 1rem !important;
+}
+
+.d-header .bequant-theme-toggle:hover {
+  background-color: var(--bequant-gray-100) !important;
+  transform: none !important;
+}
+
+/* Dark mode theme toggle hover */
+[data-theme="dark"] .d-header .bequant-theme-toggle:hover {
+  background-color: var(--bequant-gray-800) !important;
+}
+
+.d-header .bequant-theme-toggle svg {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
 }
 
 /* Navigation */
@@ -215,40 +295,28 @@ a:hover {
   color: var(--bequant-primary-light) !important;
 }
 
-/* Theme Toggle Button */
+/* Theme Toggle Button - Now in header */
 .bequant-theme-toggle {
-  position: fixed !important;
-  bottom: 2rem !important;
-  right: 2rem !important;
-  z-index: 1000 !important;
-  background-color: var(--bequant-primary) !important;
-  color: white !important;
+  background-color: transparent !important;
+  color: var(--bequant-text) !important;
   border: none !important;
-  border-radius: 50% !important;
-  width: 3rem !important;
-  height: 3rem !important;
-  display: flex !important;
+  border-radius: 0.5rem !important;
+  padding: 0.5rem !important;
+  display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   cursor: pointer !important;
   transition: all 0.2s ease !important;
-  box-shadow: var(--bequant-shadow) !important;
-  font-size: 0 !important;
+  font-size: 1rem !important;
 }
 
 .bequant-theme-toggle:hover {
-  background-color: var(--bequant-primary-light) !important;
-  transform: scale(1.1) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .bequant-theme-toggle {
-    bottom: 1rem !important;
-    right: 1rem !important;
-    width: 2.5rem !important;
-    height: 2.5rem !important;
-  }
+.bequant-theme-toggle svg {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
 }
 
 /* Custom Scrollbar */
@@ -358,7 +426,18 @@ a:hover {
       button.innerHTML = this.getToggleIcon();
       
       button.addEventListener('click', () => this.toggleTheme());
-      document.body.appendChild(button);
+      
+      // Insert the button into the header, before the user avatar
+      const headerButtons = document.querySelector('.d-header .header-buttons');
+      if (headerButtons) {
+        headerButtons.insertBefore(button, headerButtons.firstChild);
+      } else {
+        // Fallback: append to header
+        const header = document.querySelector('.d-header');
+        if (header) {
+          header.appendChild(button);
+        }
+      }
       
       const currentTheme = localStorage.getItem(this.STORAGE_KEY) || this.getSystemTheme();
       this.updateToggleButton(currentTheme);
