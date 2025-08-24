@@ -816,6 +816,39 @@ input[type="radio"] {
   background-color: var(--bequant-surface) !important;
 }
 
+/* Aggressive admin panel fixes */
+.admin-controls,
+.admin-controls .content,
+.admin-controls .content .content-body,
+.admin-controls .content .content-body .content-body,
+.admin-controls .content .content-body .content-body .content-body {
+  background-color: var(--bequant-bg) !important;
+  color: var(--bequant-text) !important;
+}
+
+/* Target specific admin panel containers */
+.admin-controls .content .content-body .content-body,
+.admin-controls .content .content-body .content-body .content-body,
+.admin-controls .content .content-body .content-body .content-body .content-body {
+  background-color: var(--bequant-surface) !important;
+  color: var(--bequant-text) !important;
+}
+
+/* Force all admin content to be light */
+.admin-controls .content *,
+.admin-controls .content .content-body *,
+.admin-controls .content .content-body .content-body * {
+  background-color: var(--bequant-surface) !important;
+  color: var(--bequant-text) !important;
+}
+
+/* But preserve specific element colors */
+.admin-controls .content .btn-primary,
+.admin-controls .content .btn-primary * {
+  background-color: var(--bequant-primary) !important;
+  color: var(--bequant-on-primary) !important;
+}
+
 /* Override any Discourse default dark styling */
 body,
 html {
