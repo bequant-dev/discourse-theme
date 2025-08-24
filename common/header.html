@@ -1,0 +1,410 @@
+<!-- BeQuant Theme Header -->
+<!-- This file will be automatically included in all Discourse pages -->
+
+<!-- Custom CSS for BeQuant Theme -->
+<style>
+/* BeQuant Theme CSS Variables and Base Styles */
+:root {
+  /* BeQuant Color Palette */
+  --bequant-primary: #2563eb;
+  --bequant-primary-dark: #0f172a;
+  --bequant-primary-light: #38bdf8;
+  
+  /* Light Mode Colors */
+  --bequant-bg: #ffffff;
+  --bequant-surface: #f8fafc;
+  --bequant-border: #e2e8f0;
+  --bequant-text: #1e293b;
+  --bequant-text-secondary: #64748b;
+  --bequant-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Dark Mode Colors */
+[data-theme="dark"] {
+  --bequant-bg: #0f172a;
+  --bequant-surface: #1e293b;
+  --bequant-border: #334155;
+  --bequant-text: #f1f5f9;
+  --bequant-text-secondary: #94a3b8;
+  --bequant-primary: #38bdf8;
+  --bequant-primary-light: #2563eb;
+  --bequant-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Global Theme Styles */
+body {
+  background-color: var(--bequant-bg) !important;
+  color: var(--bequant-text) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Styling */
+.d-header {
+  background-color: var(--bequant-surface) !important;
+  border-bottom: 1px solid var(--bequant-border) !important;
+  box-shadow: var(--bequant-shadow) !important;
+}
+
+.d-header .header-buttons .btn {
+  background-color: var(--bequant-primary) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 0.5rem !important;
+  padding: 0.5rem 1rem !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.d-header .header-buttons .btn:hover {
+  background-color: var(--bequant-primary-light) !important;
+  transform: translateY(-1px) !important;
+}
+
+.d-header .header-links a {
+  color: var(--bequant-text) !important;
+  font-weight: 500 !important;
+  transition: color 0.2s ease !important;
+}
+
+.d-header .header-links a:hover {
+  color: var(--bequant-primary) !important;
+}
+
+/* Navigation */
+.nav-pills .nav-item a {
+  color: var(--bequant-text-secondary) !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.nav-pills .nav-item a:hover {
+  color: var(--bequant-primary) !important;
+  background-color: rgba(37, 99, 235, 0.1) !important;
+}
+
+.nav-pills .nav-item a.active {
+  background-color: var(--bequant-primary) !important;
+  color: white !important;
+}
+
+/* Topic List */
+.topic-list .topic-list-item {
+  background-color: var(--bequant-surface) !important;
+  border: 1px solid var(--bequant-border) !important;
+  border-radius: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.topic-list .topic-list-item:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--bequant-shadow) !important;
+}
+
+.topic-list .topic-list-item .main-link .title {
+  color: var(--bequant-text) !important;
+  font-weight: 600 !important;
+}
+
+.topic-list .topic-list-item .main-link .title:hover {
+  color: var(--bequant-primary) !important;
+}
+
+.topic-list .topic-list-item .num {
+  color: var(--bequant-text-secondary) !important;
+}
+
+/* Topic View */
+.topic-post {
+  background-color: var(--bequant-surface) !important;
+  border: 1px solid var(--bequant-border) !important;
+  border-radius: 0.75rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.topic-post .cooked {
+  color: var(--bequant-text) !important;
+  line-height: 1.6 !important;
+}
+
+.topic-post .post-info {
+  color: var(--bequant-text-secondary) !important;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn.btn-primary {
+  background-color: var(--bequant-primary) !important;
+  border-color: var(--bequant-primary) !important;
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--bequant-primary-light) !important;
+  border-color: var(--bequant-primary-light) !important;
+  transform: translateY(-1px) !important;
+}
+
+.btn.btn-danger {
+  background-color: #ef4444 !important;
+  border-color: #ef4444 !important;
+}
+
+.btn.btn-danger:hover {
+  background-color: #dc2626 !important;
+  border-color: #dc2626 !important;
+}
+
+/* Forms */
+.form-control {
+  background-color: var(--bequant-surface) !important;
+  border: 1px solid var(--bequant-border) !important;
+  border-radius: 0.5rem !important;
+  color: var(--bequant-text) !important;
+}
+
+.form-control:focus {
+  border-color: var(--bequant-primary) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Sidebar */
+.sidebar-section {
+  background-color: var(--bequant-surface) !important;
+  border: 1px solid var(--bequant-border) !important;
+  border-radius: 0.75rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.sidebar-section .sidebar-section-header {
+  color: var(--bequant-text) !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid var(--bequant-border) !important;
+}
+
+.sidebar-section .sidebar-section-content {
+  color: var(--bequant-text-secondary) !important;
+}
+
+/* Code Blocks */
+pre {
+  background-color: var(--bequant-surface) !important;
+  border: 1px solid var(--bequant-border) !important;
+  border-radius: 0.5rem !important;
+  color: var(--bequant-text) !important;
+}
+
+code {
+  background-color: rgba(37, 99, 235, 0.1) !important;
+  color: var(--bequant-primary) !important;
+  border-radius: 0.25rem !important;
+  padding: 0.125rem 0.25rem !important;
+}
+
+/* Links */
+a {
+  color: var(--bequant-primary) !important;
+  transition: color 0.2s ease !important;
+}
+
+a:hover {
+  color: var(--bequant-primary-light) !important;
+}
+
+/* Theme Toggle Button */
+.bequant-theme-toggle {
+  position: fixed !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+  z-index: 1000 !important;
+  background-color: var(--bequant-primary) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 50% !important;
+  width: 3rem !important;
+  height: 3rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-shadow: var(--bequant-shadow) !important;
+  font-size: 0 !important;
+}
+
+.bequant-theme-toggle:hover {
+  background-color: var(--bequant-primary-light) !important;
+  transform: scale(1.1) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bequant-theme-toggle {
+    bottom: 1rem !important;
+    right: 1rem !important;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bequant-surface) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bequant-border) !important;
+  border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bequant-text-secondary) !important;
+}
+
+/* Additional Discourse-specific overrides */
+#main-outlet {
+  background-color: var(--bequant-bg) !important;
+}
+
+.list-controls {
+  background-color: var(--bequant-surface) !important;
+  border: 1px solid var(--bequant-border) !important;
+  border-radius: 0.75rem !important;
+}
+
+.category-box {
+  background-color: var(--bequant-surface) !important;
+  border: 1px solid var(--bequant-border) !important;
+  border-radius: 0.75rem !important;
+}
+
+.category-box:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--bequant-shadow) !important;
+}
+
+/* Ensure smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+</style>
+
+<!-- Custom JavaScript for Theme Toggle -->
+<script>
+// BeQuant Theme Toggle for Discourse
+(function() {
+  'use strict';
+  
+  const ThemeManager = {
+    STORAGE_KEY: 'bequant-theme',
+    THEMES: { LIGHT: 'light', DARK: 'dark' },
+    
+    init() {
+      this.loadTheme();
+      this.createToggleButton();
+      this.setupSystemThemeListener();
+    },
+    
+    loadTheme() {
+      const savedTheme = localStorage.getItem(this.STORAGE_KEY);
+      const systemTheme = this.getSystemTheme();
+      const theme = savedTheme || systemTheme;
+      this.applyTheme(theme);
+    },
+    
+    getSystemTheme() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches 
+        ? this.THEMES.DARK 
+        : this.THEMES.LIGHT;
+    },
+    
+    applyTheme(theme) {
+      const root = document.documentElement;
+      if (theme === this.THEMES.DARK) {
+        root.setAttribute('data-theme', 'dark');
+        root.classList.add('dark-mode');
+        root.classList.remove('light-mode');
+      } else {
+        root.setAttribute('data-theme', 'light');
+        root.classList.add('light-mode');
+        root.classList.remove('dark-mode');
+      }
+      localStorage.setItem(this.STORAGE_KEY, theme);
+      this.updateToggleButton(theme);
+    },
+    
+    toggleTheme() {
+      const currentTheme = localStorage.getItem(this.STORAGE_KEY) || this.getSystemTheme();
+      const newTheme = currentTheme === this.THEMES.LIGHT ? this.THEMES.DARK : this.THEMES.LIGHT;
+      this.applyTheme(newTheme);
+    },
+    
+    createToggleButton() {
+      const existingButton = document.querySelector('.bequant-theme-toggle');
+      if (existingButton) existingButton.remove();
+      
+      const button = document.createElement('button');
+      button.className = 'bequant-theme-toggle';
+      button.setAttribute('aria-label', 'Toggle theme');
+      button.setAttribute('title', 'Toggle light/dark mode');
+      button.innerHTML = this.getToggleIcon();
+      
+      button.addEventListener('click', () => this.toggleTheme());
+      document.body.appendChild(button);
+      
+      const currentTheme = localStorage.getItem(this.STORAGE_KEY) || this.getSystemTheme();
+      this.updateToggleButton(currentTheme);
+    },
+    
+    updateToggleButton(theme) {
+      const button = document.querySelector('.bequant-theme-toggle');
+      if (!button) return;
+      button.innerHTML = this.getToggleIcon(theme);
+      button.setAttribute('aria-label', `Switch to ${theme === 'light' ? 'dark' : 'light'} mode`);
+    },
+    
+    getToggleIcon(theme) {
+      const currentTheme = theme || localStorage.getItem(this.STORAGE_KEY) || this.getSystemTheme();
+      
+      if (currentTheme === this.THEMES.LIGHT) {
+        return '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>';
+      } else {
+        return '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>';
+      }
+    },
+    
+    setupSystemThemeListener() {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      mediaQuery.addEventListener('change', (e) => {
+        if (!localStorage.getItem(this.STORAGE_KEY)) {
+          const newTheme = e.matches ? this.THEMES.DARK : this.THEMES.LIGHT;
+          this.applyTheme(newTheme);
+        }
+      });
+    }
+  };
+  
+  // Initialize when Discourse is ready
+  const initTheme = () => {
+    if (window.Discourse && document.querySelector('.d-header')) {
+      setTimeout(() => ThemeManager.init(), 500);
+    } else {
+      setTimeout(initTheme, 100);
+    }
+  };
+  
+  if (document.readyState !== 'loading') {
+    initTheme();
+  } else {
+    document.addEventListener('DOMContentLoaded', initTheme);
+  }
+})();
+</script> 

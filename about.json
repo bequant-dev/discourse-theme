@@ -1,0 +1,42 @@
+{
+  "name": "BeQuant Theme",
+  "about_url": "https://bequant.dev",
+  "about_url_text": "BeQuant",
+  "license_url": "https://github.com/your-username/bequant-discourse-theme",
+  "theme_version": 1,
+  "minimum_discourse_version": "2.7.0",
+  "assets": {
+    "bequant-theme": "assets/bequant-theme.scss",
+    "theme-toggle": "assets/theme-toggle.js"
+  },
+  "color_schemes": {
+    "BeQuant Light": {
+      "primary": "2563eb",
+      "secondary": "f8fafc",
+      "tertiary": "38bdf8",
+      "quaternary": "e2e8f0",
+      "header_background": "ffffff",
+      "header_primary": "1e293b",
+      "highlight": "2563eb",
+      "danger": "ef4444",
+      "success": "10b981",
+      "love": "f43f5e"
+    },
+    "BeQuant Dark": {
+      "primary": "38bdf8",
+      "secondary": "1e293b",
+      "tertiary": "2563eb",
+      "quaternary": "334155",
+      "header_background": "0f172a",
+      "header_primary": "f1f5f9",
+      "highlight": "38bdf8",
+      "danger": "f87171",
+      "success": "34d399",
+      "love": "fb7185"
+    }
+  },
+  "modifiers": {
+    "serialize_topic_excerpts": true
+  },
+  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
+} 
