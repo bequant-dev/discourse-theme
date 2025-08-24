@@ -1,5 +1,33 @@
 # BeQuant Theme Changelog
 
+## Version 1.5.0 - Material Design 3 Implementation
+
+### 🎨 **Material Design 3 Color Palette**
+- **Complete color overhaul** - Replaced custom colors with Material Design 3 palette
+- **Better contrast ratios** - All colors meet WCAG accessibility standards
+- **Consistent visual hierarchy** - Proper primary, secondary, and surface colors
+- **Professional appearance** - Industry-standard Material Design colors
+
+### 🔧 **Sidebar Selection Fixes**
+- **Fixed invisible text** - Selected items now have proper contrast
+- **Material Design selection states** - Proper elevation and color usage
+- **Smooth transitions** - 200ms ease transitions for all interactions
+- **Better hover states** - Subtle background changes with proper contrast
+
+### 🎯 **Button Improvements**
+- **Material Design buttons** - Proper elevation and typography
+- **Enhanced hover effects** - Subtle shadows and transforms
+- **Better visual feedback** - Active states with proper shadows
+- **Typography improvements** - Uppercase text with letter spacing
+
+### 📐 **Technical Changes**
+- Updated to Material Design 3 color system
+- Added proper elevation shadows for selected states
+- Implemented consistent spacing and typography
+- Enhanced accessibility with better contrast ratios
+
+---
+
 ## Version 1.4.0 - Complete Light Theme Overhaul
 
 ### 🎨 **Complete Light Theme Fixes**

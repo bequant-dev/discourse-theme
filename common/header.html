@@ -10,23 +10,35 @@
 --bequant-primary-dark: #0f172a;   /* Slate-900 */
 --bequant-primary-light: #38bdf8;  /* Teal-400 */
   
-  /* Light Mode Colors - Softer, more pleasant design */
---bequant-bg: #f8fafc;              /* Slate-50 background - softer white */
---bequant-surface: #ffffff;         /* White surface */
---bequant-border: #e2e8f0;          /* Slate-200 border - softer */
---bequant-text: #1e293b;            /* Slate-800 text - softer than pure black */
---bequant-text-secondary: #64748b;  /* Slate-500 secondary text - softer */
---bequant-gray-50: #f8fafc;         /* Slate-50 */
---bequant-gray-100: #f1f5f9;        /* Slate-100 */
---bequant-gray-200: #e2e8f0;        /* Slate-200 */
---bequant-gray-300: #cbd5e1;        /* Slate-300 */
---bequant-gray-400: #94a3b8;        /* Slate-400 */
---bequant-gray-500: #64748b;        /* Slate-500 */
---bequant-gray-600: #475569;        /* Slate-600 */
---bequant-gray-700: #334155;        /* Slate-700 */
---bequant-gray-800: #1e293b;        /* Slate-800 */
---bequant-gray-900: #0f172a;        /* Slate-900 */
---bequant-gray-950: #020617;        /* Slate-950 */
+  /* Light Mode Colors - Material Design 3 Palette */
+--bequant-bg: #fafafa;              /* Material Grey 50 */
+--bequant-surface: #ffffff;         /* Material White */
+--bequant-surface-variant: #f5f5f5; /* Material Grey 100 */
+--bequant-border: #e0e0e0;          /* Material Grey 300 */
+--bequant-text: #212121;            /* Material Grey 900 */
+--bequant-text-secondary: #757575;  /* Material Grey 600 */
+--bequant-text-tertiary: #9e9e9e;   /* Material Grey 500 */
+--bequant-primary: #1976d2;         /* Material Blue 700 */
+--bequant-primary-light: #42a5f5;   /* Material Blue 400 */
+--bequant-primary-dark: #1565c0;    /* Material Blue 800 */
+--bequant-on-primary: #ffffff;      /* White text on primary */
+--bequant-secondary: #f5f5f5;       /* Material Grey 100 */
+--bequant-on-secondary: #212121;    /* Dark text on secondary */
+--bequant-error: #d32f2f;           /* Material Red 700 */
+--bequant-success: #388e3c;         /* Material Green 700 */
+--bequant-warning: #f57c00;         /* Material Orange 700 */
+--bequant-info: #0288d1;            /* Material Light Blue 700 */
+--bequant-gray-50: #fafafa;
+--bequant-gray-100: #f5f5f5;
+--bequant-gray-200: #eeeeee;
+--bequant-gray-300: #e0e0e0;
+--bequant-gray-400: #bdbdbd;
+--bequant-gray-500: #9e9e9e;
+--bequant-gray-600: #757575;
+--bequant-gray-700: #616161;
+--bequant-gray-800: #424242;
+--bequant-gray-900: #212121;
+--bequant-gray-950: #212121;
   --bequant-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
@@ -453,6 +465,65 @@ body {
   color: var(--bequant-primary) !important;
 }
 
+/* Material Design Sidebar Selection States */
+.sidebar .sidebar-section-content a,
+.sidebar .sidebar-section-content .sidebar-section-link,
+.sidebar .sidebar-section-content .sidebar-section-link-wrapper {
+  color: var(--bequant-text) !important;
+  background-color: transparent !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem 1rem !important;
+  margin: 0.125rem 0 !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+  display: block !important;
+}
+
+.sidebar .sidebar-section-content a:hover,
+.sidebar .sidebar-section-content .sidebar-section-link:hover,
+.sidebar .sidebar-section-content .sidebar-section-link-wrapper:hover {
+  background-color: var(--bequant-secondary) !important;
+  color: var(--bequant-primary) !important;
+}
+
+/* Selected state - Material Design elevation */
+.sidebar .sidebar-section-content a.active,
+.sidebar .sidebar-section-content .sidebar-section-link.active,
+.sidebar .sidebar-section-content .sidebar-section-link-wrapper.active,
+.sidebar .sidebar-section-content a.selected,
+.sidebar .sidebar-section-content .sidebar-section-link.selected,
+.sidebar .sidebar-section-content .sidebar-section-link-wrapper.selected {
+  background-color: var(--bequant-primary) !important;
+  color: var(--bequant-on-primary) !important;
+  box-shadow: 0 2px 4px -1px rgba(25, 118, 210, 0.2), 0 1px 2px 0 rgba(25, 118, 210, 0.14) !important;
+  font-weight: 500 !important;
+}
+
+/* Admin panel sidebar selection */
+.admin-controls .sidebar-section-content a,
+.admin-controls .sidebar-section-content .sidebar-section-link {
+  color: var(--bequant-text) !important;
+  background-color: transparent !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem 1rem !important;
+  margin: 0.125rem 0 !important;
+  transition: all 0.2s ease !important;
+}
+
+.admin-controls .sidebar-section-content a:hover,
+.admin-controls .sidebar-section-content .sidebar-section-link:hover {
+  background-color: var(--bequant-secondary) !important;
+  color: var(--bequant-primary) !important;
+}
+
+.admin-controls .sidebar-section-content a.active,
+.admin-controls .sidebar-section-content .sidebar-section-link.active {
+  background-color: var(--bequant-primary) !important;
+  color: var(--bequant-on-primary) !important;
+  box-shadow: 0 2px 4px -1px rgba(25, 118, 210, 0.2), 0 1px 2px 0 rgba(25, 118, 210, 0.14) !important;
+  font-weight: 500 !important;
+}
+
 #main-outlet .sidebar .sidebar-section-header {
   color: var(--bequant-text) !important;
   font-weight: 600 !important;
@@ -558,23 +629,33 @@ body {
   border-bottom: 2px solid var(--bequant-primary) !important;
 }
 
-/* Fix "New Topic" button */
+/* Fix "New Topic" button - Material Design */
 .btn.btn-primary,
 .btn-primary {
   background-color: var(--bequant-primary) !important;
-  color: white !important;
+  color: var(--bequant-on-primary) !important;
   border: none !important;
   border-radius: 0.5rem !important;
-  padding: 0.5rem 1rem !important;
+  padding: 0.75rem 1.5rem !important;
   font-weight: 500 !important;
+  font-size: 0.875rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.025em !important;
   transition: all 0.2s ease !important;
+  box-shadow: 0 2px 4px -1px rgba(25, 118, 210, 0.2), 0 1px 2px 0 rgba(25, 118, 210, 0.14) !important;
 }
 
 .btn.btn-primary:hover,
 .btn-primary:hover {
-  background-color: #2563eb !important;
+  background-color: var(--bequant-primary-dark) !important;
   transform: translateY(-1px) !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 8px -1px rgba(25, 118, 210, 0.3), 0 2px 4px 0 rgba(25, 118, 210, 0.2) !important;
+}
+
+.btn.btn-primary:active,
+.btn-primary:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 4px -1px rgba(25, 118, 210, 0.2), 0 1px 2px 0 rgba(25, 118, 210, 0.14) !important;
 }
 
 /* Fix "Powered by Discourse" */
