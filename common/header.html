@@ -5,10 +5,10 @@
 <style>
 /* BeQuant Theme CSS Variables and Base Styles */
 :root {
-  /* BeQuant Color Palette - Exact from bequant.dev */
-  --bequant-primary: #2563eb;        /* Indigo-600 */
-  --bequant-primary-dark: #0f172a;   /* Slate-900 */
-  --bequant-primary-light: #38bdf8;  /* Teal-400 */
+  /* BeQuant Color Palette - Softer for light mode */
+--bequant-primary: #3b82f6;        /* Blue-500 - softer than Indigo-600 */
+--bequant-primary-dark: #0f172a;   /* Slate-900 */
+--bequant-primary-light: #38bdf8;  /* Teal-400 */
   
   /* Light Mode Colors - Softer, more pleasant design */
 --bequant-bg: #f8fafc;              /* Slate-50 background - softer white */
@@ -375,6 +375,219 @@ body {
   background-color: var(--bequant-bg) !important;
 }
 
+/* Sidebar - Light theme styling */
+.sidebar-section {
+  background-color: var(--bequant-surface) !important;
+  border: 1px solid var(--bequant-border) !important;
+  border-radius: 0.75rem !important;
+  margin-bottom: 1rem !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Fix sidebar background in light mode */
+#main-outlet .sidebar,
+.sidebar {
+  background-color: var(--bequant-surface) !important;
+  border-right: 1px solid var(--bequant-border) !important;
+}
+
+/* Force sidebar to be light in light mode */
+[data-theme="light"] .sidebar,
+[data-theme="light"] #main-outlet .sidebar {
+  background-color: var(--bequant-surface) !important;
+  color: var(--bequant-text) !important;
+}
+
+/* Override any dark sidebar styling */
+.sidebar,
+#main-outlet .sidebar,
+.d-sidebar {
+  background-color: var(--bequant-surface) !important;
+  color: var(--bequant-text) !important;
+}
+
+/* Fix category and tag buttons */
+.nav-pills .nav-item .btn,
+.nav-pills .nav-item button,
+.nav-pills .nav-item a {
+  color: var(--bequant-text) !important;
+  background-color: transparent !important;
+  border: 1px solid var(--bequant-border) !important;
+  border-radius: 0.5rem !important;
+  padding: 0.5rem 1rem !important;
+  margin-right: 0.5rem !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+.nav-pills .nav-item .btn:hover,
+.nav-pills .nav-item button:hover,
+.nav-pills .nav-item a:hover {
+  color: var(--bequant-primary) !important;
+  background-color: rgba(59, 130, 246, 0.05) !important;
+  border-color: var(--bequant-primary) !important;
+}
+
+/* Fix sidebar navigation */
+#main-outlet .sidebar .sidebar-section,
+.sidebar .sidebar-section {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--bequant-text) !important;
+}
+
+/* Force all sidebar elements to be light */
+.sidebar *,
+#main-outlet .sidebar * {
+  color: var(--bequant-text) !important;
+}
+
+.sidebar a,
+#main-outlet .sidebar a {
+  color: var(--bequant-text) !important;
+}
+
+.sidebar a:hover,
+#main-outlet .sidebar a:hover {
+  color: var(--bequant-primary) !important;
+}
+
+#main-outlet .sidebar .sidebar-section-header {
+  color: var(--bequant-text) !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid var(--bequant-border) !important;
+  padding-bottom: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+#main-outlet .sidebar .sidebar-section-content {
+  color: var(--bequant-text) !important;
+}
+
+#main-outlet .sidebar a {
+  color: var(--bequant-text) !important;
+  transition: color 0.2s ease !important;
+}
+
+#main-outlet .sidebar a:hover {
+  color: var(--bequant-primary) !important;
+}
+
+.sidebar-section .sidebar-section-header {
+  color: var(--bequant-text) !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid var(--bequant-border) !important;
+}
+
+.sidebar-section .sidebar-section-content {
+  color: var(--bequant-text) !important;
+}
+
+/* Sidebar navigation items */
+.sidebar-section a {
+  color: var(--bequant-text) !important;
+  transition: color 0.2s ease !important;
+}
+
+.sidebar-section a:hover {
+  color: var(--bequant-primary) !important;
+}
+
+/* Fix grey text issues */
+.nav-pills .nav-item a,
+.sidebar-section a,
+.header-links a {
+  color: var(--bequant-text) !important;
+}
+
+.nav-pills .nav-item a:hover,
+.sidebar-section a:hover,
+.header-links a:hover {
+  color: var(--bequant-primary) !important;
+}
+
+/* Fix specific grey text elements */
+.sidebar-section .sidebar-section-content a,
+.sidebar-section .sidebar-section-content span,
+.sidebar-section .sidebar-section-content div {
+  color: var(--bequant-text) !important;
+}
+
+/* Fix "More..." text and similar elements */
+.sidebar-section .sidebar-section-content .more,
+.sidebar-section .sidebar-section-content .more-link,
+.sidebar-section .sidebar-section-content .more-link a {
+  color: var(--bequant-text) !important;
+}
+
+/* Fix category text */
+.category-box .category-box-inner .category-box-heading,
+.category-box .category-box-inner .category-box-heading a {
+  color: var(--bequant-text) !important;
+}
+
+/* Fix topic list text */
+.topic-list .topic-list-item .main-link .title,
+.topic-list .topic-list-item .main-link .blurb {
+  color: var(--bequant-text) !important;
+}
+
+/* Fix navigation buttons and elements */
+.nav-pills .nav-item a,
+.nav-pills .nav-item button,
+.nav-pills .nav-item .btn {
+  color: var(--bequant-text) !important;
+  background-color: transparent !important;
+  border: none !important;
+  font-weight: 500 !important;
+}
+
+.nav-pills .nav-item a:hover,
+.nav-pills .nav-item button:hover,
+.nav-pills .nav-item .btn:hover {
+  color: var(--bequant-primary) !important;
+  background-color: rgba(59, 130, 246, 0.05) !important;
+}
+
+.nav-pills .nav-item a.active,
+.nav-pills .nav-item button.active,
+.nav-pills .nav-item .btn.active {
+  color: var(--bequant-primary) !important;
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  border-bottom: 2px solid var(--bequant-primary) !important;
+}
+
+/* Fix "New Topic" button */
+.btn.btn-primary,
+.btn-primary {
+  background-color: var(--bequant-primary) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 0.5rem !important;
+  padding: 0.5rem 1rem !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn.btn-primary:hover,
+.btn-primary:hover {
+  background-color: #2563eb !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Fix "Powered by Discourse" */
+.footer-message,
+.footer-message a {
+  color: var(--bequant-text-secondary) !important;
+  text-decoration: none !important;
+}
+
+.footer-message a:hover {
+  color: var(--bequant-primary) !important;
+}
+
 /* Topic list improvements */
 .topic-list .topic-list-item {
   background-color: var(--bequant-surface) !important;
@@ -390,17 +603,18 @@ body {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
 }
 
-/* Navigation pills - softer styling */
+/* Navigation pills - better contrast */
 .nav-pills .nav-item a {
-  color: var(--bequant-text-secondary) !important;
+  color: var(--bequant-text) !important;
   border-radius: 0.5rem !important;
   transition: all 0.2s ease !important;
   background-color: transparent !important;
+  font-weight: 500 !important;
 }
 
 .nav-pills .nav-item a:hover {
   color: var(--bequant-primary) !important;
-  background-color: rgba(37, 99, 235, 0.05) !important;
+  background-color: rgba(59, 130, 246, 0.05) !important;
 }
 
 .nav-pills .nav-item a.active {

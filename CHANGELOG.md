@@ -1,5 +1,48 @@
 # BeQuant Theme Changelog
 
+## Version 1.4.0 - Complete Light Theme Overhaul
+
+### 🎨 **Complete Light Theme Fixes**
+- **Fixed persistent dark sidebar** - Added multiple CSS overrides to force light background
+- **Fixed navigation buttons** - Categories, tags, and "New Topic" buttons now properly styled
+- **Fixed "Powered by Discourse"** - Now uses proper secondary text color
+- **Enhanced button styling** - Better hover effects and visual feedback
+- **Improved sidebar sections** - All sidebar elements now properly visible in light mode
+
+### 🔧 **Technical Changes**
+- Added multiple CSS selectors to override Discourse's default dark sidebar
+- Fixed navigation pill styling with proper borders and hover states
+- Enhanced button styling with better visual hierarchy
+- Added comprehensive sidebar element styling
+- Improved footer message styling
+
+### 🎯 **Visual Improvements**
+- **Sidebar**: Now consistently light with proper text contrast
+- **Navigation**: Clean button styling with proper borders
+- **Buttons**: Enhanced hover effects and visual feedback
+- **Footer**: Proper secondary text color
+- **Overall**: Consistent light theme throughout the interface
+
+---
+
+## Version 1.3.0 - Light Theme Fixes
+
+### 🔧 **Technical Changes**
+- Updated primary color from `#2563eb` to `#3b82f6` for better light mode contrast
+- Added specific sidebar styling for light mode
+- Fixed grey text issues with targeted CSS selectors
+- Improved navigation pill contrast and readability
+- Enhanced sidebar section styling
+
+### 🎯 **Visual Improvements**
+- **Sidebar**: Light background with proper borders
+- **Text**: All text now properly visible with good contrast
+- **Navigation**: Better contrast for pills and links
+- **Categories**: Proper text visibility
+- **Topic Lists**: Improved readability
+
+---
+
 ## Version 1.2.0 - Light Theme Improvements
 
 ### 🎨 **Light Theme Redesign**
