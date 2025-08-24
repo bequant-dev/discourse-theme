@@ -1,5 +1,34 @@
 # BeQuant Theme Changelog
 
+## Version 1.6.0 - Complete Black Background Fixes
+
+### 🎨 **Final Black Background Elimination**
+- **Fixed all remaining black backgrounds** - Admin panels, theme management, dropdowns
+- **Fixed black selectors** - All selection states now use proper Material Design colors
+- **Enhanced form elements** - Inputs, checkboxes, and dropdowns now properly styled
+- **Improved modal backgrounds** - All overlays and modals use light theme colors
+
+### 🔧 **Comprehensive Coverage**
+- **Admin interface** - Complete light theme for all admin panels
+- **Theme management** - Proper styling for theme selection and configuration
+- **Dropdown menus** - All select-kit elements now use light backgrounds
+- **Form controls** - Inputs, checkboxes, and radio buttons properly styled
+- **Navigation tabs** - All tab elements use consistent light styling
+- **Info boxes** - Alerts and notifications use proper light backgrounds
+
+### 🎯 **Technical Improvements**
+- **Universal selectors** - Added comprehensive CSS to catch all dark elements
+- **Force light theme** - Override any remaining Discourse default dark styling
+- **Better specificity** - Ensured all selectors have proper precedence
+- **Consistent styling** - All elements now follow Material Design principles
+
+### 📐 **Accessibility**
+- **Complete contrast** - All text now visible against light backgrounds
+- **Proper focus states** - Form elements have clear focus indicators
+- **Consistent interaction** - All interactive elements follow same design patterns
+
+---
+
 ## Version 1.5.0 - Material Design 3 Implementation
 
 ### 🎨 **Material Design 3 Color Palette**

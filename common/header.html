@@ -669,6 +669,171 @@ body {
   color: var(--bequant-primary) !important;
 }
 
+/* Fix remaining black backgrounds and selectors */
+/* Admin panel backgrounds */
+.admin-controls,
+.admin-controls .content,
+.admin-controls .content .content-body {
+  background-color: var(--bequant-bg) !important;
+  color: var(--bequant-text) !important;
+}
+
+/* Theme management backgrounds */
+.theme-list,
+.theme-list .theme-item,
+.theme-list .theme-item .theme-item-body {
+  background-color: var(--bequant-surface) !important;
+  border: 1px solid var(--bequant-border) !important;
+  color: var(--bequant-text) !important;
+}
+
+/* Dropdown and select backgrounds */
+.select-kit,
+.select-kit .select-kit-header,
+.select-kit .select-kit-collection,
+.select-kit .select-kit-collection .select-kit-row {
+  background-color: var(--bequant-surface) !important;
+  color: var(--bequant-text) !important;
+  border: 1px solid var(--bequant-border) !important;
+}
+
+.select-kit .select-kit-header:hover {
+  background-color: var(--bequant-secondary) !important;
+}
+
+.select-kit .select-kit-collection .select-kit-row:hover {
+  background-color: var(--bequant-secondary) !important;
+}
+
+.select-kit .select-kit-collection .select-kit-row.is-selected {
+  background-color: var(--bequant-primary) !important;
+  color: var(--bequant-on-primary) !important;
+}
+
+/* Modal and overlay backgrounds */
+.modal,
+.modal .modal-inner-container,
+.modal .modal-header,
+.modal .modal-body {
+  background-color: var(--bequant-surface) !important;
+  color: var(--bequant-text) !important;
+  border: 1px solid var(--bequant-border) !important;
+}
+
+/* Tab backgrounds */
+.nav-stacked .nav-item a,
+.nav-stacked .nav-item .nav-link {
+  background-color: transparent !important;
+  color: var(--bequant-text) !important;
+  border: none !important;
+}
+
+.nav-stacked .nav-item a.active,
+.nav-stacked .nav-item .nav-link.active {
+  background-color: var(--bequant-primary) !important;
+  color: var(--bequant-on-primary) !important;
+}
+
+.nav-stacked .nav-item a:hover,
+.nav-stacked .nav-item .nav-link:hover {
+  background-color: var(--bequant-secondary) !important;
+  color: var(--bequant-primary) !important;
+}
+
+/* Form elements */
+.form-control,
+.form-control:focus {
+  background-color: var(--bequant-surface) !important;
+  color: var(--bequant-text) !important;
+  border: 1px solid var(--bequant-border) !important;
+}
+
+/* Checkbox and radio backgrounds */
+input[type="checkbox"],
+input[type="radio"] {
+  background-color: var(--bequant-surface) !important;
+  border: 1px solid var(--bequant-border) !important;
+}
+
+/* Info boxes and alerts */
+.alert,
+.alert-info,
+.alert-warning,
+.alert-error {
+  background-color: var(--bequant-surface) !important;
+  color: var(--bequant-text) !important;
+  border: 1px solid var(--bequant-border) !important;
+}
+
+/* Breadcrumb backgrounds */
+.breadcrumb,
+.breadcrumb a {
+  background-color: transparent !important;
+  color: var(--bequant-text-secondary) !important;
+}
+
+.breadcrumb a:hover {
+  color: var(--bequant-primary) !important;
+}
+
+/* Force light theme on all elements */
+[data-theme="light"] * {
+  background-color: var(--bequant-bg) !important;
+  color: var(--bequant-text) !important;
+}
+
+[data-theme="light"] .d-header,
+[data-theme="light"] .sidebar,
+[data-theme="light"] .content {
+  background-color: var(--bequant-surface) !important;
+}
+
+/* Specific theme management fixes */
+.theme-item,
+.theme-item .theme-item-body,
+.theme-item .theme-item-body .theme-item-body-content {
+  background-color: var(--bequant-surface) !important;
+  border: 1px solid var(--bequant-border) !important;
+  color: var(--bequant-text) !important;
+}
+
+.theme-item .theme-item-body .theme-item-body-content .theme-item-body-content-text {
+  color: var(--bequant-text) !important;
+}
+
+/* Fix any remaining dark backgrounds */
+.d-header,
+.sidebar,
+.content,
+.main-outlet,
+#main-outlet {
+  background-color: var(--bequant-bg) !important;
+}
+
+.d-header .contents,
+.sidebar .sidebar-section,
+.content .content-body {
+  background-color: var(--bequant-surface) !important;
+}
+
+/* Override any Discourse default dark styling */
+body,
+html {
+  background-color: var(--bequant-bg) !important;
+}
+
+/* Ensure all text is visible */
+* {
+  color: var(--bequant-text) !important;
+}
+
+/* But allow specific elements to use their intended colors */
+.d-header .title,
+.btn-primary,
+.sidebar .sidebar-section-content a.active {
+  color: inherit !important;
+}
+
 /* Topic list improvements */
 .topic-list .topic-list-item {
   background-color: var(--bequant-surface) !important;
